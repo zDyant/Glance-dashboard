@@ -1,0 +1,37 @@
+pages:
+  - name: Home
+    server:
+      host: 0.0.0.0
+      port: 8080
+      assets-path: /user/assets
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+          - type: weather
+            location: Sao Paulo, Brazil
+          - type: server-stats
+      - size: full
+        widgets:
+          - type: rss
+            limit: 10
+            collapse-after: 6
+            cache: 3h
+            feeds:
+              - url: https://ciechanow.ski/atom.xml
+              - url: https://www.joshwcomeau.com/rss.xml
+              - url: https://samwho.dev/rss.xml
+              - url: https://awesomekling.github.io/feed.xml
+              - url: https://ishadeed.com/feed.xml
+          - type: videos
+            style: grid-cards
+            collapse-after-rows: 3
+            channels:
+              - UC5_b-2hC2g7-22v4pW9WHgg # Wolfgang's Channel
+      - size: small
+        widgets:
+          - type: releases
+            cache: 1d
+            repositories:
+            - rust-lang/rust
+            - glanceapp/glance
