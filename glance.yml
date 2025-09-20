@@ -4,6 +4,15 @@ pages:
       host: 0.0.0.0
       port: 8080
       assets-path: /user/assets
+    head-widgets:
+      - type: docker-containers
+        containers:
+          n8n:
+            name: n8n
+            description: Description of the container
+            url: https://n8n.zdyant.xyz
+            icon: di:n8n
+            hide: false
     columns:
       - size: small
         widgets:
@@ -11,6 +20,7 @@ pages:
           - type: weather
             location: Sao Paulo, Brazil
           - type: server-stats
+
       - size: full
         widgets:
           - type: rss
@@ -18,16 +28,26 @@ pages:
             collapse-after: 6
             cache: 3h
             feeds:
-              - url: https://ciechanow.ski/atom.xml
-              - url: https://www.joshwcomeau.com/rss.xml
-              - url: https://samwho.dev/rss.xml
-              - url: https://awesomekling.github.io/feed.xml
-              - url: https://ishadeed.com/feed.xml
+              - url: https://9to5linux.com/feed
+              - url: https://www.adrenaline.com.br/feed/
+              - url: https://pointieststick.com/feed/
+              - url: https://diolinux.com.br/feed
+              - url: https://news.nononsenseapps.com/index.atom
+              - url: https://www.gamingonlinux.com/article_rss.php
+              - url: https://news.itsfoss.com/latest/rss/
+              - url: https://linuxgamingcentral.org/posts/index.xml
+              - url: https://feed.alternativeto.net/releases/all
+              - url: https://www.omglinux.com/feed/
+              - url: https://www.phoronix.com/rss.php
+              - url: https://tuxphones.com/rss/
+              - url: https://wololo.net/feed/
           - type: videos
             style: grid-cards
             collapse-after-rows: 3
             channels:
-              - UC5_b-2hC2g7-22v4pW9WHgg # Wolfgang's Channel
+              - UCsnGwSIHyoYN0kiINAGUKxg # Wolfgang's Channel (Great for Nix and Rust)
+              - UChRFo9vcnuwvcz0DWTEaBNw # Vex
+              - UC7YOGHUfC1Tb6E4pudI9STA # Mental outlaw
       - size: small
         widgets:
           - type: releases
